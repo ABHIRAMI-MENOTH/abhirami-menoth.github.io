@@ -186,3 +186,37 @@
 
   </div>
 </section>
+  <!-- CONTACT -->
+<section id="contact" class="section fade">
+  <h2>Contact</h2>
+  <p>Email: yourmail@gmail.com</p>
+</section>
+
+<!-- SCRIPTS -->
+<script>
+  // typing animation
+  const text = "Machine Learning Developer | AI Enthusiast";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 50);
+    }
+  }
+  typing();
+
+  // scroll animation
+  const faders = document.querySelectorAll('.fade');
+  window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+        el.classList.add('show');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
