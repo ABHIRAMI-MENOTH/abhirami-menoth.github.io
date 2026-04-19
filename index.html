@@ -29,7 +29,7 @@
 
     .navbar a {
       color: white;
-      margin: 0 20px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -43,6 +43,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
 
     .hero h1 {
@@ -92,13 +93,14 @@
       border-radius: 8px;
     }
 
-    /* PROJECT GRID */
-    .projects {
+    /* GRID */
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
+    /* CARD */
     .card {
       background: rgba(30,41,59,0.6);
       backdrop-filter: blur(10px);
@@ -116,11 +118,6 @@
       width: 100%;
       border-radius: 10px;
       margin-bottom: 10px;
-    }
-
-    .card .btn {
-      display: inline-block;
-      margin-right: 10px;
     }
 
     /* ANIMATION */
@@ -145,6 +142,7 @@
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
   <a href="#contact">Contact</a>
 </div>
 
@@ -167,7 +165,7 @@
   <h2>About Me</h2>
   <p>
     I build AI-powered solutions using machine learning and computer vision.
-    Focused on real-world impact and intelligent systems.
+    Passionate about solving real-world problems and creating impactful applications.
   </p>
 </section>
 
@@ -189,19 +187,19 @@
 <section id="projects" class="section fade">
   <h2>Projects</h2>
 
-  <div class="projects">
+  <div class="grid">
 
     <div class="card">
       <img src="traffic.jpg">
       <h3>🚦 Traffic Sign Recognition</h3>
-      <p>CNN-based classification system for traffic signs.</p>
+      <p>CNN-based system for classifying traffic signs.</p>
       <a href="https://github.com/ABHIRAMI-MENOTH/MINI_PROJECT.git" class="btn">GitHub</a>
       <a href="#" class="btn">Live Demo</a>
     </div>
     <div class="card">
       <img src="vision.jpg">
       <h3>👁️ Vision Assist</h3>
-      <p>AI system for assisting visually impaired users.</p>
+      <p>Assistive AI system for visually impaired users.</p>
       <a href="https://github.com/ABHIRAMI-MENOTH/MAIN_PROJECT.git" class="btn">GitHub</a>
       <a href="#" class="btn">Live Demo</a>
     </div>
@@ -217,6 +215,33 @@
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section fade">
+  <h2>Certifications</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📜 Machine Learning - Coursera</h3>
+      <p>Completed ML course covering supervised and unsupervised learning.</p>
+      <a href="#" class="btn">View Certificate</a>
+    </div>
+
+    <div class="card">
+      <h3>📜 Deep Learning</h3>
+      <p>Learned neural networks, CNNs, and AI concepts.</p>
+      <a href="#" class="btn">View Certificate</a>
+    </div>
+
+    <div class="card">
+      <h3>📜 Python for Data Science</h3>
+      <p>Covered Python, data analysis, and visualization.</p>
+      <a href="#" class="btn">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="section fade">
   <h2>Contact</h2>
@@ -225,6 +250,7 @@
 
 <!-- SCRIPT -->
 <script>
+  // typing animation
   const text = "Machine Learning Developer | AI Enthusiast";
   let i = 0;
 
@@ -237,6 +263,7 @@
   }
   typing();
 
+  // scroll animation
   const faders = document.querySelectorAll('.fade');
   window.addEventListener('scroll', () => {
     faders.forEach(el => {
