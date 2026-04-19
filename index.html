@@ -70,7 +70,6 @@
     .social i {
       margin: 10px;
       font-size: 22px;
-      cursor: pointer;
     }
 
     .social i:hover { color: #38bdf8; }
@@ -79,6 +78,19 @@
     .section { padding: 80px 10%; }
 
     h2 { color: #38bdf8; }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
 
     /* PROJECT GRID */
     .projects {
@@ -106,6 +118,11 @@
       margin-bottom: 10px;
     }
 
+    .card .btn {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
     /* ANIMATION */
     .fade {
       opacity: 0;
@@ -126,6 +143,7 @@
 <div class="navbar">
   <a href="#home">Home</a>
   <a href="#about">About</a>
+  <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </div>
@@ -136,15 +154,11 @@
   <p id="typing"></p>
 
   <a href="#projects" class="btn">View Work</a>
-  <a href="resume.pdf" class="btn">Download Resume</a>
+  <a href="resume.pdf" class="btn">Resume</a>
 
   <div class="social">
-    <a href="https://github.com/ABHIRAMI-MENOTH" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="#" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
+    <a href="https://github.com/ABHIRAMI-MENOTH"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </section>
 
@@ -152,9 +166,23 @@
 <section id="about" class="section fade">
   <h2>About Me</h2>
   <p>
-    I build real-world AI solutions using machine learning and computer vision.
-    Passionate about solving practical problems and developing impactful applications.
+    I build AI-powered solutions using machine learning and computer vision.
+    Focused on real-world impact and intelligent systems.
   </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section fade">
+  <h2>Skills</h2>
+
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">Computer Vision</div>
+    <div class="skill">TensorFlow</div>
+    <div class="skill">OpenCV</div>
+    <div class="skill">Git & GitHub</div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
@@ -166,35 +194,37 @@
     <div class="card">
       <img src="traffic.jpg">
       <h3>🚦 Traffic Sign Recognition</h3>
-      <p>CNN-based model for traffic sign classification.</p>
-      <a href="https://github.com/ABHIRAMI-MENOTH/MINI_PROJECT.git" class="btn">View</a>
+      <p>CNN-based classification system for traffic signs.</p>
+      <a href="https://github.com/ABHIRAMI-MENOTH/MINI_PROJECT.git" class="btn">GitHub</a>
+      <a href="#" class="btn">Live Demo</a>
     </div>
-
     <div class="card">
       <img src="vision.jpg">
       <h3>👁️ Vision Assist</h3>
-      <p>Assistive AI system for visually impaired users.</p>
-      <a href="https://github.com/ABHIRAMI-MENOTH/MAIN_PROJECT.git" class="btn">View</a>
+      <p>AI system for assisting visually impaired users.</p>
+      <a href="https://github.com/ABHIRAMI-MENOTH/MAIN_PROJECT.git" class="btn">GitHub</a>
+      <a href="#" class="btn">Live Demo</a>
     </div>
 
     <div class="card">
       <img src="craft.jpg">
       <h3>🛍️ Craft Connect</h3>
       <p>Mobile app for craft enthusiasts.</p>
-      <a href="https://github.com/ABHIRAMI-MENOTH/Craft-Connect.git" class="btn">View</a>
+      <a href="https://github.com/ABHIRAMI-MENOTH/Craft-Connect.git" class="btn">GitHub</a>
+      <a href="#" class="btn">Live Demo</a>
     </div>
 
   </div>
 </section>
-  <!-- CONTACT -->
+
+<!-- CONTACT -->
 <section id="contact" class="section fade">
   <h2>Contact</h2>
   <p>Email: yourmail@gmail.com</p>
 </section>
 
-<!-- SCRIPTS -->
+<!-- SCRIPT -->
 <script>
-  // typing animation
   const text = "Machine Learning Developer | AI Enthusiast";
   let i = 0;
 
@@ -207,7 +237,6 @@
   }
   typing();
 
-  // scroll animation
   const faders = document.querySelectorAll('.fade');
   window.addEventListener('scroll', () => {
     faders.forEach(el => {
